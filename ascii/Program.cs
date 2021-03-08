@@ -55,13 +55,13 @@ namespace ascii
 					
                     foreach (Bitmap map in GetGifFrames(img))
                     {
-						sw.Start();
+			sw.Start();
                         WriteImage(map);
-						sw.Stop();
-						fps = sw.ElapsedMilliseconds;
-						frameTimes.Add(fps);
-						Console.Title = $"Ascii_GIF_Player - {1000d / fps:n2} FPS";
-						sw.Reset();
+			sw.Stop();
+			fps = sw.ElapsedMilliseconds;
+			frameTimes.Add(fps);
+			Console.Title = $"Ascii_GIF_Player - {1000d / fps:n2} FPS";
+			sw.Reset();
                         Console.SetCursorPosition(0, 0);
                     }
                 }
