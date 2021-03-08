@@ -11,12 +11,12 @@ namespace ascii
 {
     class Program
     {
-		[DllImport("user32.dll")]
+	[DllImport("user32.dll")]
         public static extern bool ShowWindow(System.IntPtr hWnd, int cmdShow);
         private static void Maximize() => Task.Run(() => ShowWindow(Process.GetCurrentProcess().MainWindowHandle, 3));
         static void Main(string[] args)
         {
-			Maximize();
+	    Maximize();
             Console.Title = "Ascii_GIF_Player";
             Bitmap img = null;
             if (args.Length == 1)
@@ -45,9 +45,9 @@ namespace ascii
                 }
             }
 
-			Stopwatch sw = new Stopwatch();
-			double fps = 0;
-			List<double> frameTimes = new List<double>();
+	    Stopwatch sw = new Stopwatch();
+	    double fps = 0;
+	    List<double> frameTimes = new List<double>();
             for (int i = 0; i < 15; i++) //arbitrary gif repeat
             {
                 if (img != null)
